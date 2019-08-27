@@ -1,0 +1,21 @@
+﻿<Window x:Class="AddonsInstaller.SuperWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AddonsInstaller"
+        mc:Ignorable="d"
+        Title="AddonsInstaller" Height="450" Width="513" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBlock x:Name="PathTxt" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20"><Run Text="Working in:"/><LineBreak/><Run/></TextBlock>
+        <ListBox x:Name="InstalledAddonsList" Margin="10,56,0,35" HorizontalAlignment="Left" Width="236"/>
+        <Button Name="UninstallBtn" Content="Uninstall" HorizontalAlignment="Left" Margin="131,0,0,10" Width="115" Height="20" VerticalAlignment="Bottom" Click="UninstallBtn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Installed AddOns" VerticalAlignment="Top" Width="236"/>
+        <Button x:Name="RefreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="10,0,0,10" Width="116" RenderTransformOrigin="0.107,0.45" Click="RefreshBtn_Click" Height="20" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="AvailableAddonsList" Margin="261,81,10,35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="261,38,0,0" TextWrapping="Wrap" Text="Find new AddOns" VerticalAlignment="Top"/>
+        <TextBox x:Name="SearchQuery" Height="20" Margin="261,56,90,0" TextWrapping="Wrap" VerticalAlignment="Top" KeyDown="SearchQuery_KeyDown"/>
+        <Button x:Name="SearchBtn" Content="Search" Margin="0,56,10,0" VerticalAlignment="Top" Click="SearchBtn_Click" RenderTransformOrigin="0.82,0.5" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="InstallBtn" Content="Install" Margin="261,0,10,10" Click="InstallBtn_Click" Height="20" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
